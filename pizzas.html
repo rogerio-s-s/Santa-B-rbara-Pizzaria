@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANTA BÁRBARA PIZZARIA</title>
+  <style>
+    body {
+      background-color: #eee7e7
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    @media all and (min-width: 560px) {
+      @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+      svg {
+        font-family: "Russo One", sans-serif;
+        width: 100%;
+        height: 100%;
+      }
+
+      /*Banner*/
+      svg text {
+        animation: stroke 5s infinite alternate;
+        stroke-width: 2;
+        stroke: #365FA0;
+        font-size: 100px;
+      }
+
+      @keyframes stroke {
+        0% {
+          fill: rgba(72, 138, 204, 0);
+          stroke: rgb(0, 255, 13);
+          stroke-dashoffset: 25%;
+          stroke-dasharray: 0 50%;
+          stroke-width: 2;
+        }
+
+        70% {
+          fill: rgba(72, 138, 204, 0);
+          stroke: rgb(54, 160, 77);
+        }
+
+        80% {
+          fill: rgba(72, 138, 204, 0);
+          stroke: rgb(225, 250, 4);
+          stroke-width: 3;
+        }
+
+        100% {
+          fill: rgb(8, 122, 236);
+          stroke: rgba(54, 95, 160, 0);
+          stroke-dashoffset: -25%;
+          stroke-dasharray: 50% 0;
+          stroke-width: 0;
+        }
+      }
+
+      .wrapper {
+        background-color: rgb(12, 12, 12);
+      }
+/*-------------------------------------------------------------------------*/
+
+a {
+    text-decoration: none;
+    padding: 20px;
+    background: red;
+    color: azure;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 10%;
+    text-align: center;
+    font-size: 15px;
+}
+      .logo {
+        height: 200px;
+        width: 200px;
+        border: 1px solid rgb(247, 203, 6);
+        border-radius: 100px;
+        margin-top: 10px;
+        margin-left: 5px;
+      }
+
+      .whats {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        
+      }
+
+
+      h2 {
+        border: 1px solid rgb(5, 125, 245);
+        text-align: center;
+        border-radius: 5px;
+        font-size: 30px;
+        margin: 10px;
+        padding: 20px;
+
+      }
+
+      html {
+        box-sizing: border-box;
+        font: 10px sans-serif;
+      }
+
+      body {
+        margin: 0px;
+        background-color: red;
+      }
+
+      h1 {
+        font-size: 16px;
+        margin: 0 0 16px 0;
+        width: 100%;
+        text-align: center;
+
+      }
+
+      ul {
+        list-style: none;
+        margin: 16px 0;
+        padding: 0;
+        font-size: 16px;
+      }
+
+      li>b {
+        color: rgb(255, 30, 0);
+        font-size: 4px;
+        font-size: 12px;
+
+      }
+
+      button {
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        color: beige;
+        background: #369;
+        font-size: 14px;
+        width: 60%;
+        margin: auto 0 16px auto;
+      }
+
+      .container {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-flow: row wrap;
+
+      }
+
+      .produto {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        border-radius: 16px;
+        padding: 3px;
+        width: 80%;
+        height: 90%;
+        margin: 0 auto;
+        margin-bottom: 8px;
+        max-width: 28rem;
+        margin: 1rem;
+        background-color: rgb(231, 247, 10);
+
+      }
+
+   
+
+    img {
+      width: 50%;
+    }
+/*-------------------------------------------------*/
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Tooltip oculto inicialmente */
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      width: 150px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 5px;
+      border-radius: 5px;
+
+      /* Posição do tooltip */
+      position: absolute;
+      bottom: 110%;
+      /* Acima da imagem */
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      /* Animação de transição */
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Triângulo na parte inferior do tooltip */
+    .tooltip .tooltip-text::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      /* Alinhado ao fundo do tooltip */
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
+
+    /* Mostrar tooltip ao passar o mouse */
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Estilo da imagem pizzas */
+    .tooltip img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+  
+
+  <div class="wrapper">
+    <svg>
+      <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+        SANTA BÁRBARA PIZZARIA
+      </text>
+    </svg>
+  </div>
+  <div id="menu">
+    <center>
+      <a href="index.html"> INICIO</a>
+      <a href="esfihas.html">ESFIHAS</a>
+      <a href="fogazzas.html">CALZONE</a>
+      <a href="beirutes.html">BEIRUTES</a>
+    </center>
+  </div>
+  <div class="whats">
+    <a href="https://wa.me/5511999998888" target="_blank"><img src="w1.png" alt="WhatsApp" style="width: 70px;"></a>
+</div>
+  <img src="logo.png" alt="logo" class="logo">
+  <!--pizza a moda da casa-->
+ <!------------------------------------------------------------>
+ 
+  <article class="container">
+
+    <div class="tooltip">
+      <section class="produto">
+        <h1>
+          <li>Pizza grande R$<b> 54,00</b></li>
+          <li>Brotinho R$<b> 32,00</b></li>
+        </h1>
+        <img src="imagem/pizzaModaCasa.png" alt="Pizza ">
+        <ul>
+          <li>Dinheiro</li>
+          <li>Cartão</li>
+          <li>Pix</li>
+        </ul>
+        <button type="button"> A MODA DA CASA...</button>
+        <div class="tooltip-text">Calabresa, frango, milho, ervilha, cebola,palmito, cheddar, catupiry,
+          mussarela, bacon, tomate, orégano e azeitona</div>
+    </div>
+  
+    </section>
+
+    <!--pizza mussarela-->
+    <div class="tooltip">
+      <section class="produto">
+        <h1>
+          <li>Pizza grande R$<b> 39,00</b></li>
+          <li>Brotinho R$<b> 28,00</b></li>
+        </h1>
+        <img src="imagem/pizza1.png" alt="Pizza ">
+        <ul>
+          <li>Dinheiro</li>
+          <li>Cartão</li>
+          <li>Pix </li>
+        </ul>
+        <button type="button"> Mussarela...</button>
+        <div class="tooltip-text">Molho, mussarela, tomate,orégano, azeitona </div>
+    </div>
+    </section>
+
+    <!--calabresa-->
+    <div class="tooltip">
+      <section class="produto">
+        <h1>
+          <li>Pizza grande R$<b> 39,00</b></li>
+          <li>Brotinho R$<b> 28,00</b></li>
+        </h1>
+        <img src="imagem/calabresa.png" alt="Pizza ">
+        <ul>
+          <li>Dinheiro</li>
+          <li>Cartão</li>
+          <li>Pix </li>
+        </ul>
+        <button type="button"> Calabresa paulista...</button>
+        <div class="tooltip-text">Molho, Calabresa, cebola, orégano, azeitona </div>
+    </div>
+    </section>
+    <!--calabresa catupiry-->
+    <div class="tooltip">
+      <section class="produto">
+        <h1>
+          <li>Pizza grande R$<b>39,00</b></li>
+          <li> Brotinho R$<b>28,00</b></li>
+        </h1>
+        <img src="imagem/pizza1.png" alt="Pizza ">
+        <ul>
+          <li>Dinheiro</li>
+          <li>Cartão</li>
+          <li>Pix </li>
+        </ul>
+        <button type="button"> Calabresa catupiry...</button>
+        <div class="tooltip-text">Molho, Calabresa, catupiry, orégano, azeitona </div>
+    </div>
+    </section>
+
+    <div class="tooltip">
+      <section class="produto">
+        <h1>
+          <li>Pizza grande R$<b>45,00</b></li>
+          <li>Brotinho R$<b>28,00</b></li>
+        </h1>
+        <img src="imagem/pizzaPortuguesa.png" alt="Pizza ">
+        <ul>
+          <li>Dinheiro</li>
+          <li>Cartão</li>
+          <li>Pix </li>
+        </ul>
+        <button type="button"> Portuguesa...</button>
+        <div class="tooltip-text">Molho, Presunto, milho, ervilha, cebola,mussala, tomate, orégano, azeitona </div>
+    </div>
+    </section>
+
+
+
+    <div class="tooltip">
+      <section class="produto">
+        <h1>
+          <li>Pizza grande R$<b>39,00</b></li>
+          <li> Brotinho R$<b>28,00</b></li>
+        </h1>
+        <img src="imagem/pizzaFrango.png" alt="Pizza ">
+        <ul>
+          <li>Dinheiro</li>
+          <li>Cartão</li>
+          <li>Pix </li>
+        </ul>
+        <button type="button"> Frango catupiry</button>
+        <div class="tooltip-text">Molho, Calabresa, catupiry, orégano, azeitona </div>
+    </div>
+    </section>
+
+    <div class="tooltip">
+      <section class="produto">
+        <h1>
+          <li>Pizza grande R$<b>39,00</b></li>
+          <li> Brotinho R$<b>28,00</b></li>
+        </h1>
+        <img src="imagem/pizza1.png" alt="Pizza ">
+        <ul>
+          <li>Dinheiro</li>
+          <li>Cartão</li>
+          <li>Pix </li>
+        </ul>
+        <button type="button"> Calabresa catupiry...</button>
+        <div class="tooltip-text">Molho, Calabresa, catupiry, orégano, azeitona </div>
+    </div>
+    </section>
+
+    <div class="tooltip">
+      <section class="produto">
+        <h1>
+          <li>Pizza grande R$<b>39,00</b></li>
+          <li> Brotinho R$<b>28,00</b></li>
+        </h1>
+        <img src="imagem/pizza1.png" alt="Pizza ">
+        <ul>
+          <li>Dinheiro</li>
+          <li>Cartão</li>
+          <li>Pix </li>
+        </ul>
+        <button type="button"> Calabresa catupiry...</button>
+        <div class="tooltip-text">Molho, Calabresa, catupiry, orégano, azeitona </div>
+    </div>
+    </section>
+
+    <div class="tooltip">
+      <section class="produto">
+        <h1>
+          <li>Pizza grande R$<b>39,00</b></li>
+          <li> Brotinho R$<b>28,00</b></li>
+        </h1>
+        <img src="imagem/pizza1.png" alt="Pizza ">
+        <ul>
+          <li>Dinheiro</li>
+          <li>Cartão</li>
+          <li>Pix </li>
+        </ul>
+        <button type="button"> Calabresa catupiry...</button>
+        <div class="tooltip-text">Molho, Calabresa, catupiry, orégano, azeitona </div>
+    </div>
+    </section>
+    </div </body>
+
+</html>

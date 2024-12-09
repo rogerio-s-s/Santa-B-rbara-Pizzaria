@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANTA BÁRBARA PIAZZARIA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: red;
+        }
+
+        @media all and (min-width: 560px) {
+            @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+            svg {
+                font-family: "Russo One", sans-serif;
+                width: 100%;
+                height: 100%;
+            }
+
+            /*Banner*/
+            svg text {
+                animation: stroke 5s infinite alternate;
+                stroke-width: 2;
+                stroke: #365FA0;
+                font-size: 100px;
+            }
+
+            @keyframes stroke {
+                0% {
+                    fill: rgba(72, 138, 204, 0);
+                    stroke: rgb(0, 255, 13);
+                    stroke-dashoffset: 25%;
+                    stroke-dasharray: 0 50%;
+                    stroke-width: 2;
+                }
+
+                70% {
+                    fill: rgba(72, 138, 204, 0);
+                    stroke: rgb(54, 160, 77);
+                }
+
+                80% {
+                    fill: rgba(72, 138, 204, 0);
+                    stroke: rgb(225, 250, 4);
+                    stroke-width: 3;
+                }
+
+                100% {
+                    fill: rgb(8, 122, 236);
+                    stroke: rgba(54, 95, 160, 0);
+                    stroke-dashoffset: -25%;
+                    stroke-dasharray: 50% 0;
+                    stroke-width: 0;
+                }
+            }
+
+            .wrapper {
+                background-color: rgb(12, 12, 12);
+            }
+
+            a {
+                text-decoration: none;
+                padding: 20px;
+                background: red;
+                color: #ffcc00;
+                margin-right: 30px;
+                margin-left: 30px;
+                border-radius: 10%;
+                text-align: center;
+                font-size: 15px;
+            }
+
+            a:hover {
+                color: #0c0c0c;
+            }
+
+            /*logo Santa barbara pizzaria*/
+            .logo {
+                height: 200px;
+                width: 200px;
+                border: 1px solid rgb(247, 203, 6);
+                border-radius: 100px;
+                margin-top: 10px;
+                margin-left: 1rem;
+
+            }
+
+            /*logo do WhatsApp*/
+            .whats {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+
+
+            }
+
+            /*------------------------------------------*/
+
+            .produto {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: censpace-between;
+                border: 1px solid #4d4c4c;
+                border-radius: 16px;
+                padding: 1px;
+                width: 100%;
+                background-color: rgb(231, 247, 10);
+                max-width: 14rem;
+                margin: 3rem;
+
+            }
+
+            .container {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                max-width: 1200px;
+                margin: 0 auto;
+                flex-flow: row wrap;
+
+
+            }
+
+            h1 {
+                font-size: 16px;
+                margin: 0 0 16px 0;
+                width: 100%;
+                text-align: center;
+
+            }
+
+            ul {
+                list-style: none;
+                margin: 16px 0;
+                padding: 0;
+                font-size: 16px;
+            }
+
+            li>b {
+                color: red;
+                font-size: 14px;
+
+            }
+
+            li {
+                font-size: 16px;
+                list-style: none;
+                width: 100%;
+                font-family: Arial, sans-serif;
+                font-weight: bold;
+                margin: 2px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <svg>
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                SANTA BÁRBARA PIZZARIA
+            </text>
+        </svg>
+    </div>
+    <div id="menu">
+        <center>
+            <a href="index.html"> INICIO</a>
+            <a href="pizzas.html">PIZZA</a>
+            <a href="fogazzas.html">CALZONE</a>
+            <a href="beirutes.html">BEIRUTES</a>
+        </center>
+    </div>
+    <div class="whats">
+        <a href="https://wa.me/5511999998888" target="_blank"><img src="w1.png" alt="WhatsApp" style="width: 70px;"></a>
+    </div>
+    <img src="logo.png" alt="Logo da Pizzaria" class="logo">
+    <img src="imagem/esfihaDoce.jpg" alt="esfihaDoce" class="logo">
+    <img src="imagem/bananaNevada.jpg" alt="BananaNevada" class="logo">
+    <img src="imagem/EsfihaCarne.jpg" alt="esfihaCarne" class="logo">
+    <img src="imagem/esfihaDoce.jpg" alt="esfihaDoce" class="logo">
+    <img src="imagem/EsfihaCarne.jpg" alt="esfihaCarne" class="logo">
+
+
+
+    <article class="container">
+
+        <div class="produto">
+            <h1>
+                <li>Esfihas de R$<b>4,00</b></li>
+            </h1>
+
+            <ul>
+                <li>Carne...</li>
+                <li>Dois queijo...</li>
+                <li>mussarela...</li>
+                <li>Calabresa e mussarela....</li>
+                <li>Calabresa catupiry...</li>
+                <li>Frango catupiry... </li>
+                <li>Presunto mussarela...</li>
+                <li>Pizza...</li>
+
+            </ul>
+        </div>
+
+
+        <div class="produto">
+            <h1>
+                <li>Esfihas de R$<b>4,00</b></li>
+
+            </h1>
+
+            <ul>
+                <li>Bacon...</li>
+                <li>Lombo com mussarela...</li>
+                <li>Carne com queijo...</li>
+                <li>Brócolis....</li>
+                <li>Frango milho e mussarela.</li>
+                <li>Calabresa barbecue... </li>
+            </ul>
+
+
+        </div>
+
+    </article>
+    <article class="container">
+
+        <div class="produto">
+            <h1>
+                <li>Esfihas de R$<b>4,50</b></li>
+
+            </h1>
+
+            <ul>
+                <li>Atum e mussarela...</li>
+                <li>Peperoni e mussarela...</li>
+                <li>Lombo catupiry mussarela...</li>
+                <li>Frango catupiry mussarela...</li>
+            </ul>
+
+
+        </div>
+
+
+        <div class="produto">
+            <h1>
+                <li>Esfihas de R$<b>4,00</b></li>
+
+            </h1>
+
+            <ul>
+                <li>Bis...</li>
+                <li>Prestigio...</li>
+                <li>Brigadeiro...</li>
+                <li></li>
+            </ul>
+
+
+        </div>
+
+
+        <div class="produto">
+            <h1>
+                <li>Esfihas de R$<b>4,50</b></li>
+
+            </h1>
+
+            <ul>
+                <li>Banana nevada...</li>
+                <li>Ouro branco...</li>
+                <li>Morango...</li>
+                <li>Confete...</li>
+            </ul>
+
+
+        </div>
+
+
+    </article>
+
+    <article class="container">
+
+        <div class="produto">
+            <h1>
+                <li>Combo feliz R$<b>38,00</b></li>
+
+            </h1>
+
+            <ul>
+                <li>4 Carne...</li>
+                <li>4 Mussarela...</li>
+
+                <li>4 Frango catupiry...</li>
+            </ul>
+
+
+        </div>
+
+
+        <div class="produto">
+            <h1>
+                <li>Combo perfeito R$<b>45,00</b></li>
+
+            </h1>
+
+            <ul>
+                <li> 3 Carne...</li>
+                <li>3 Mussarela...</li>
+                <li>3 Presunto mussala...</li>
+                <li>3 Frango catupiry...</li>
+                <li>3 Calabresa mussala...</li>
+            </ul>
+
+
+        </div>
+
+
+        <div class="produto">
+            <h1>
+                <li>Combo familia R$<b>68,00</b></li>
+
+            </h1>
+
+            <ul>
+                <li>3 carne...</li>
+                <li>3 Mussarela...</li>
+                <li>3 Frango catupiry...</li>
+                <li>3 Calabresa catupiry...</li>
+                <li>3 Presunto mussarela...</li>
+                <li> 3 chocolate e confete...</li>
+                <li>1 Guaratuba</li>
+            </ul>
+
+
+        </div>
+
+
+    </article>
+</body>
+
+</html>

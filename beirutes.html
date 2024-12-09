@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: red;
+        }
+
+        @media all and (min-width: 560px) {
+            @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+            svg {
+                font-family: "Russo One", sans-serif;
+                width: 100%;
+                height: 100%;
+            }
+
+            /*Banner*/
+            svg text {
+                animation: stroke 5s infinite alternate;
+                stroke-width: 2;
+                stroke: #365FA0;
+                font-size: 100px;
+            }
+
+            @keyframes stroke {
+                0% {
+                    fill: rgba(72, 138, 204, 0);
+                    stroke: rgb(0, 255, 13);
+                    stroke-dashoffset: 25%;
+                    stroke-dasharray: 0 50%;
+                    stroke-width: 2;
+                }
+
+                70% {
+                    fill: rgba(72, 138, 204, 0);
+                    stroke: rgb(54, 160, 77);
+                }
+
+                80% {
+                    fill: rgba(72, 138, 204, 0);
+                    stroke: rgb(225, 250, 4);
+                    stroke-width: 3;
+                }
+
+                100% {
+                    fill: rgb(8, 122, 236);
+                    stroke: rgba(54, 95, 160, 0);
+                    stroke-dashoffset: -25%;
+                    stroke-dasharray: 50% 0;
+                    stroke-width: 0;
+                }
+            }
+
+            .wrapper {
+                background-color: rgb(12, 12, 12);
+            }
+
+            /*logo Santa barbara pizzaria*/
+            .logo {
+                height: 200px;
+                width: 200px;
+                border: 1px solid rgb(247, 203, 6);
+                border-radius: 100px;
+                margin-top: 10px;
+                margin-left: 1rem;
+
+            }
+
+            /*logo do WhatsApp*/
+            .whats {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+               
+            }
+
+            a {
+                text-decoration: none;
+                padding: 20px;
+                background: red;
+                color: #ffcc00;
+                margin-right: 30px;
+                margin-left: 30px;
+                border-radius: 10%;
+                text-align: center;
+                font-size: 15px;
+            }
+        }
+
+        a:hover {
+            color: #0c0c0c;
+        }
+
+        h2 {
+            border: 1px solid rgb(5, 125, 245);
+            text-align: center;
+            border-radius: 5px;
+            font-size: 30px;
+            margin: 10px;
+            padding: 20px;
+
+        }
+
+        html {
+            box-sizing: border-box;
+            font: 10px sans-serif;
+        }
+
+        body {
+            margin: 0px;
+            background-color: red;
+        }
+
+        h1 {
+            font-size: 16px;
+            margin: 0 0 16px 0;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        ul {
+            list-style: none;
+            margin: 16px 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        li>b {
+            color: rgb(255, 30, 0);
+            font-size: 4px;
+            font-size: 12px;
+
+        }
+
+
+
+        .container {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 15;
+            flex-flow: row wrap;
+            margin-left: 15rem;
+
+        }
+
+        .produto {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            border: 1px solid #ccc;
+            border-radius: 16px;
+            padding: 3px;
+            width: 100%;
+            margin: 10;
+
+            max-width: 28rem;
+            margin: 5rem;
+            background-color: rgb(231, 247, 10);
+
+        }
+
+
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <svg>
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                SANTA BÁRBARA PIZZARIA
+            </text>
+        </svg>
+    </div>
+
+    <div id="menu">
+        <center>
+          <a href="index.html"> INICIO</a>
+          <a href="esfihas.html">ESFIHAS</a>
+          <a href="fogazzas.html">CALZONE</a>
+          <a href="pizzas.html">PIZZAS</a>
+        </center>
+      </div>
+
+    <div class="whats">
+        <a href="https://wa.me/5511999998888" target="_blank"><img src="w1.png" alt="WhatsApp" style="width: 70px;"></a>
+    </div>
+    <img src="logo.png" alt="Logo da Pizzaria" class="logo">
+
+    <article class="container">
+
+
+        <section class="produto">
+            <h1>
+                <li>Beirute de Lombo<b> 32,00</b></li>
+
+            </h1>
+            <img src="imagem/beirute1.jpg" alt="Pizza ">
+            <ul>
+                <p>Lombo, frango, milho, catupiry, cheddar,mussarela bacon, maionese, tomate e alface.</p><br>
+                <li>Dinheiro</li>
+                <li>Cartão</li>
+                <li>Pix</li>
+            </ul>
+
+
+
+        </section>
+
+
+
+
+        <section class="produto">
+            <h1>
+                <li>Beirute de carne de hamburgue<b> 40,00</b></li>
+
+            </h1>
+            <img src="imagem/beirute.jpg" alt="Pizza ">
+            <ul>
+                <p>Carne de hambugue, cheddar, catupiry, milho, mussarela bacon, maionese, mostarda, ketcup, tomate e
+                    alface.</p><br>
+                <li>Dinheiro</li>
+                <li>Cartão</li>
+                <li>Pix</li>
+            </ul>
+
+
+
+        </section>
+
+        <section class="produto">
+            <h1>
+                <li>Beirute de calabresa<b> 32,00</b></li>
+
+            </h1>
+            <img src="imagem/beirutePeperoni.png" alt="Pizza ">
+            <ul>
+                <p>Calabresa, frango, catupiry, milho, ervilha, mussarela bacon, maionese, tomate e alface.</p><br>
+                <li>Dinheiro</li>
+                <li>Cartão</li>
+                <li>Pix</li>
+            </ul>
+
+    </article>
+
+    </section>
+    <article class="container">
+        <section class="produto">
+            <h1>
+                <li>Beirute de peperoni<b> 32,00</b></li>
+
+            </h1>
+            <img src="imagem/beirutePeperoni.png" alt="Pizza ">
+            <ul>
+                <p>Peperoni, frango, milho, ervilha, catupiry, mussarela, bacon, maionese,tomate, alface.</p><br>
+                <li>Dinheiro</li>
+                <li>Cartão</li>
+                <li>Pix</li>
+            </ul>
+        </section>
+
+        <section class="produto">
+            <h1>
+                <li>Beirute de presunto<b> 32,00</b></li>
+
+            </h1>
+            <img src="imagem/beirutePeperoni.png" alt="Pizza ">
+            <ul>
+                <p>Peperoni, frango, milho, ervilha, catupiry, mussarela, bacon, maionese,tomate, alface.</p><br>
+                <li>Dinheiro</li>
+                <li>Cartão</li>
+                <li>Pix</li>
+            </ul>
+        </section>
+    </article>
+</body>
+
+</html>
