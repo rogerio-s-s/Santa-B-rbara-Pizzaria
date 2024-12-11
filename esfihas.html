@@ -117,6 +117,7 @@
 
             }
 
+
             .container {
                 display: flex;
                 flex-flow: column;
@@ -157,6 +158,85 @@
                 font-weight: bold;
                 margin: 2px;
 
+            }
+        }
+
+        /*responsivo*/
+        @media screen and (max-width: 690px) {
+            .logo {
+                height: 80px;
+                width: 80px;
+                border: 1px solid rgb(247, 203, 6);
+                border-radius: 100px;
+                margin-top: 10px;
+                margin-left: 2rem;
+
+            }
+
+            #menu a {
+                text-decoration: none;
+                padding: 5px;
+
+                color: #ffcc00;
+                margin-right: 5px;
+                margin-left: 5px;
+                margin-top: 0;
+                text-align: center;
+            }
+
+            svg {
+                font-family: "Russo One", sans-serif;
+                width: 100%;
+                height: 100%;
+            }
+
+            svg text {
+                animation: stroke 5s infinite alternate;
+                stroke-width: 2;
+                stroke: #365FA0;
+                font-size: 28px;
+            }
+
+            @keyframes stroke {
+                0% {
+                    fill: rgba(72, 138, 204, 0);
+                    stroke: rgb(204, 248, 7);
+                    stroke-dashoffset: 25%;
+                    stroke-dasharray: 0 50%;
+                    stroke-width: 2;
+                }
+
+
+            }
+
+
+
+            .container {
+
+                margin-left: 40px;
+                gap: 40px;
+                padding: 0px;
+                justify-content: center;
+                flex-flow: wrap;
+                margin-top: 10px;
+
+            }
+
+
+            .produto {
+
+                gap: 40px;
+                padding: 0px;
+                justify-content: center;
+                flex-flow: wrap;
+margin: 20px;
+
+            }
+
+            .whats {
+                position: fixed;
+                bottom: 0;
+                right: 0;
             }
         }
     </style>
@@ -229,8 +309,7 @@
 
         </div>
 
-    </article>
-    <article class="container">
+
 
         <div class="produto">
             <h1>
@@ -250,16 +329,17 @@
 
 
         <div class="produto">
+
             <h1>
                 <li>Esfihas de R$<b>4,00</b></li>
 
             </h1>
 
-            <ul>
+            <ul><br>
                 <li>Bis...</li>
-                <li>Prestigio...</li>
+                <li>Prestígio...</li>
                 <li>Brigadeiro...</li>
-                <li></li>
+
             </ul>
 
 
@@ -267,6 +347,7 @@
 
 
         <div class="produto">
+
             <h1>
                 <li>Esfihas de R$<b>4,50</b></li>
 
@@ -283,9 +364,7 @@
         </div>
 
 
-    </article>
 
-    <article class="container">
 
         <div class="produto">
             <h1>
@@ -294,10 +373,10 @@
             </h1>
 
             <ul>
-                <li>4 Carne...</li>
-                <li>4 Mussarela...</li>
+                <li> 4 Carne...</li>
+                <li> 4 Mussarela...</li>
 
-                <li>4 Frango catupiry...</li>
+                <li> 4 Frango catupiry...</li>
             </ul>
 
 
@@ -313,9 +392,9 @@
             <ul>
                 <li> 3 Carne...</li>
                 <li>3 Mussarela...</li>
-                <li>3 Presunto mussala...</li>
+                <li>3 Presunto mussarela...</li>
                 <li>3 Frango catupiry...</li>
-                <li>3 Calabresa mussala...</li>
+                <li>3 Calabresa mussarela...</li>
             </ul>
 
 
